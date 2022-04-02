@@ -9,3 +9,5 @@ Pour augmenter le fun il faut résoudre des calculs (car les tamagotchi sont des
 Pour gagner de l'argent il faut résoudre des calculs (on s'amuse et on gagne de l'argent quoi de mieux)
 
 Les légumes font perdre 1 de fun et les fruits augmentent le fun mais les légumes ont plus de valeur énergétique..
+
+POUR LANCER LE JEU IL FAUT LANCER FenetreAcceuil.java
