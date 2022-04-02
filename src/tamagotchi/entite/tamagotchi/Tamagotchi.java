@@ -150,6 +150,7 @@ public abstract class Tamagotchi implements I_Tamagotchi
 	}
 	
 
+	// Un tamagotchi vieillit seulement de 1 ans à chaque fois.
 	@Override
 	public void vieillit() throws IllegalAgeException
 	{
@@ -245,6 +246,7 @@ public abstract class Tamagotchi implements I_Tamagotchi
 		
 	}
 	
+	//Patern observateur voir classe Joueur pour plus d'information.
 	@Override
 	public void addObservateur(I_Tamagotchi_Observateur observateur) 
 	{

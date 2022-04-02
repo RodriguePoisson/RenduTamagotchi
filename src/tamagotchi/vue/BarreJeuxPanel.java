@@ -50,11 +50,13 @@ public class BarreJeuxPanel extends JPanel implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		//OUVRE L'INVENTAIRE DU JOUEUR
 		if(e.getSource()==this.btn_inventaire)
 		{
 			new InventaireFenetre(this.centralController);
 		}
 		
+		//verifie le calcul si vrai appelle la fonction recompense tamagotchi du controller, sinon affiche faux
 		if(e.getSource()==this.btn_verif_calcul)
 		{
 		
@@ -81,6 +83,7 @@ public class BarreJeuxPanel extends JPanel implements ActionListener
 			}
 		}
 		
+		//Met fin à la partie et regarde dans les properties du projet si le record a été battu
 		if(e.getSource()==this.btn_fin_partie)
 		{
 			String propertiesFileLocation = "myPropertiesFin.properties";

@@ -33,9 +33,6 @@ public class CentralController
 		this.joueur = new Joueur("Rodrigue", 600);
 		this.observateurs_generation = new ArrayList<I_GenerationNourritureObservateur>();
 		this.nourritureDansInventaire = new LinkedList<I_Nourriture>();
-		
-		
-		
 	}
 	
 	public void addGenerationObservateur(I_GenerationNourritureObservateur observateur)
@@ -115,6 +112,7 @@ public class CentralController
 		this.joueur.ajouteArgent(50);
 		
 	}
+	//Initialise le jeu avec les properties
 	public void initialiseJeux(Properties properties)
 	{
 		FactoryTamagotchi factory_tama = new FactoryTamagotchi();

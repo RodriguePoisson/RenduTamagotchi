@@ -12,7 +12,7 @@ public class VieilissementController implements Runnable
 		this.tamagotchi = tamagotchi;
 		this.time_vieilissement = time_vieillissement;
 	}
-
+	//Vieillit le tamagotchi en fonction du temps de vieillissement
 	@Override
 	public void run() 
 	{

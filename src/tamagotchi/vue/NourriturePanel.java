@@ -26,6 +26,7 @@ public class NourriturePanel extends JPanel
 	}
 	public void paint(Graphics g)
 	{
+		//Affiche en rouge le prix si le joueur ne peut pas l'acheter et en vert si il peut
 		g.drawRect(0,0,174,100);
 		if(this.nourriture != null)
 		{

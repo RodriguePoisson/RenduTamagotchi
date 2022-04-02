@@ -20,6 +20,7 @@ public abstract class Fruit implements I_Nourriture
 		return this.funValue;
 	}
 	
+	//Donne un fruit aléatoire
 	public static Fruit getRandomFruit()
 	{
 		List<Fruit> allFruits = new ArrayList<Fruit>();

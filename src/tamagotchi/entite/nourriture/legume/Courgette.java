@@ -13,7 +13,7 @@ public class Courgette extends Legume
 	@Override
 	public int getEnergyValue() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.energyValue;
 	}
 
 	@Override

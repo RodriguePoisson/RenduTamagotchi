@@ -61,11 +61,15 @@ public class Joueur implements I_Joueur
 		this.alertObservateursArgent();
 		
 	}
+	
+	//Regarde si il y a assez d'argent.
 	@Override
 	public boolean canBuy(int argent) {
 		// TODO Auto-generated method stub
 		return this.argent>=argent;
 	}
+	
+	//Observateur ajouté pour écouter quand certaines actions sont effectués (utilisé par les fenetres)
 	@Override
 	public void addObservateur(I_Joueur_Observateur observateur)
 	{
@@ -73,6 +77,7 @@ public class Joueur implements I_Joueur
 		
 	}
 	
+	//Alerte les observateurs
 	private void alertObservateursArgent()
 	{
 		for(I_Joueur_Observateur observateur : this.observateurs)

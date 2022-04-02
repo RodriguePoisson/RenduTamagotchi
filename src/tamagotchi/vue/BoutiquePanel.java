@@ -62,6 +62,7 @@ public class BoutiquePanel extends JPanel implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
+		//Traite la demande d'achat
 		if(this.nourriture != null)
 		{
 			int price = this.nourriture.getPrice();

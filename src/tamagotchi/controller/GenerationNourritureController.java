@@ -15,6 +15,7 @@ public class GenerationNourritureController implements Runnable
 	}
 
 	@Override
+	//toutes les 5 secondes un fruit est généré
 	public void run() 
 	{
 		while(true)

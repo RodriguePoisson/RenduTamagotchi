@@ -19,6 +19,7 @@ public abstract class Legume implements I_Nourriture
 		return this.funValue;
 	}
 	
+	//Donne un legume aléatoire
 	public static Legume getRandomLegume()
 	{
 		List<Legume> allLegumes = new ArrayList<Legume>();

@@ -40,7 +40,7 @@ public class FenetreJeux extends JFrame implements I_Tamagotchi_Observateur,I_Jo
 	@Override
 	public void run() 
 	{
-		
+		//INITIALISE ET AJOUTE TOUS LES JPanel au contentPane
 		this.centralController.addGenerationObservateur(this);
 		this.tamagotchi = this.centralController.getTama();
 		this.tamagotchi.addObservateur(this);
@@ -78,9 +78,11 @@ public class FenetreJeux extends JFrame implements I_Tamagotchi_Observateur,I_Jo
 		
 	}
 	
+	//Appelé quand les valeurs du tamagotchi changent
 	@Override
 	public void est_mis_a_jour(I_Tamagotchi tamagotchi) 
 	{
+		//Met à jour la partie lié aux infos du tamagotchi
 		this.contentPane.remove(this.panInfoJeux);
 
 		this.panInfoJeux = new InfoPartiePanel(tamagotchi);
@@ -92,9 +94,12 @@ public class FenetreJeux extends JFrame implements I_Tamagotchi_Observateur,I_Jo
 		
 		
 	}
+	
+	//Appelé quand une nourriture est généré et donc achetable
 	@Override
 	public void nourritureGenere(I_Nourriture nourriture) 
 	{
+		//Met à jour la boutique ( Il faudrait mettre simplement à jour le JPanel à l'intérieur qui gere que le cadre du fruit mais je m'en suis rendu compte à la fin)
 		this.contentPane.remove(this.panBoutique);
 		
 		this.panBoutique = new BoutiquePanel(this.joueur,nourriture,this.centralController);
@@ -104,6 +109,8 @@ public class FenetreJeux extends JFrame implements I_Tamagotchi_Observateur,I_Jo
 		this.contentPane.validate();
 		this.contentPane.repaint();
 	}
+	
+	//Appelé quand les infos du joueurs sont misent à jour (ici simplement l'argent du joueur)
 	@Override
 	public void joueur_mis_a_jour(I_Joueur joueur) 
 	{

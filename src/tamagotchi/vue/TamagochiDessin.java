@@ -36,6 +36,7 @@ public class TamagochiDessin extends JPanel
 			
 			int x_bouche = x+diametre_tama/2-10;
 			int y_bouche = y+diametre_tama -20;
+			//si content bouche ouverte sinon bouche fermé
 			if(this.tamagotchi.is_happy())
 			{
 				g.drawOval(x_bouche, y_bouche-33, 50, 25);

@@ -28,6 +28,7 @@ public class Calculatrice implements I_Calculatrice
 		return nombre_donne == this.result;
 	}
 
+	//cree un resultat en faisant des nombres aléatoire et des opérateurs aléatoires
 	public void createResult()
 	{
 		Collections.shuffle(this.list_operateur);
@@ -61,6 +62,7 @@ public class Calculatrice implements I_Calculatrice
 		
 	}
 	
+	//affiche sous forme : " 2154 + 9874 "
 	public String toString()
 	{
 		return String.valueOf(this.nb_1)+"  "+this.op+"  "+String.valueOf(this.nb_2);

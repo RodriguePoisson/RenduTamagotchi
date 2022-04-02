@@ -13,6 +13,7 @@ public class TamagotchiNormal extends Tamagotchi
 		super(name);
 	}
 
+	// Mange de la nourriture et augment fun et energy par les valeurs apportées de la nourriture.
 	@Override
 	public void mange(I_Nourriture nourriture) throws IllegalEnergyException, IllegalFunException 
 	{
@@ -37,6 +38,7 @@ public class TamagotchiNormal extends Tamagotchi
 		
 	}
 
+	//reduit le fun de 1
 	@Override
 	public void ennuie()
 	{
@@ -49,6 +51,7 @@ public class TamagotchiNormal extends Tamagotchi
 		
 	}
 
+	//reduit l'energy de 1
 	@Override
 	public void faim()
 	{
@@ -61,6 +64,7 @@ public class TamagotchiNormal extends Tamagotchi
 		
 	}
 
+	//Le tamagotchi est content si son fun est plus grand que la moitié de son fun max et que son energy est plus grand que la moitié de son energy max
 	@Override
 	public boolean is_happy()
 	{

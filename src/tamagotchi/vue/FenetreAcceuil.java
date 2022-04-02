@@ -34,7 +34,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 		
 		this.energieMax = new JLabel("Energie max :");
 		this.funMax = new JLabel("Fun max :");
-		this.dureeVieillissement = new JLabel("Duree vieillissement (en seconde) :");
+		this.dureeVieillissement = new JLabel("Duree vieillissement (en milliseconde) :");
 		this.nomTama = new JLabel("Nom du Tamagotchi");
 		
 		
@@ -43,6 +43,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 		this.f_duree_vieillissement = new JTextField(10);
 		this.f_nom = new JTextField(10);
 		
+		//Regarde si des préférences ont déjà été ajouté et les mets si c'est le cas
 		if(myProp != null)
 		{
 			f_energie_max.setText(myProp.get("energy_max").toString());
@@ -90,6 +91,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 	
 	public static void main(String[] args) throws InterruptedException 
 	{
+		
 		Properties myProp = new Properties();
 		String propertiesFileLocation = "myProperties.properties";
 		InputStream in=null;
@@ -113,6 +115,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		//Enregistre les préférences de l'utilisateurs et lance la partie
 
 		String propertiesFileLocation = "myProperties.properties";
 		
