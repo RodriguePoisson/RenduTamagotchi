@@ -43,7 +43,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 		this.f_duree_vieillissement = new JTextField(10);
 		this.f_nom = new JTextField(10);
 		
-		//Regarde si des prÈfÈrences ont dÈj‡ ÈtÈ ajoutÈ et les mets si c'est le cas
+		//Regarde si des pr√©f√©rences ont d√©j√† √©t√© ajout√© et les mets si c'est le cas
 		if(myProp != null)
 		{
 			f_energie_max.setText(myProp.get("energy_max").toString());
@@ -103,19 +103,14 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 		}catch(IOException e)
 		{
 			myProp = null;
-		}finally {try {
-			in.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}}
+		}
 		new FenetreAcceuil(myProp);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		//Enregistre les prÈfÈrences de l'utilisateurs et lance la partie
+		//Enregistre les pr√©f√©rences de l'utilisateurs et lance la partie
 
 		String propertiesFileLocation = "myProperties.properties";
 		
@@ -129,7 +124,7 @@ public class FenetreAcceuil extends JFrame implements ActionListener
 		try
 		{
 			OutputStream out = new FileOutputStream(propertiesFileLocation);
-			myProp.store(out,"propriÈtÈ de lancement");
+			myProp.store(out,"propri√©t√© de lancement");
 			this.centralController.initialiseJeux(myProp);
 			SwingUtilities.invokeLater(new FenetreJeux(this.centralController));
 			out.close();
